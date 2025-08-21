@@ -10,16 +10,16 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) =>
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="flex min-h-screen w-full bg-background">
       <Sidebar 
         isOpen={sidebarOpen} 
         onClose={() => setSidebarOpen(false)} 
       />
       
-      <div className="md:ml-64">
+      <div className="flex-1 flex flex-col lg:ml-64">
         <Header onMenuClick={() => setSidebarOpen(true)} />
         
-        <main className="p-4 md:p-6">
+        <main className="flex-1 p-4 md:p-6 overflow-auto bg-background">
           {children}
         </main>
       </div>

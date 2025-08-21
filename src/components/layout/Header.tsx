@@ -16,7 +16,7 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
         <Button
           variant="ghost"
           size="icon"
-          className="md:hidden"
+          className="lg:hidden"
           onClick={onMenuClick}
         >
           <Menu className="w-5 h-5" />

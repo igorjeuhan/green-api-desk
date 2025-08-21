@@ -25,18 +25,20 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<DashboardLayout><Dashboard /></DashboardLayout>} />
-            <Route path="/sessions" element={<DashboardLayout><Sessions /></DashboardLayout>} />
-            <Route path="/messages" element={<DashboardLayout><Messages /></DashboardLayout>} />
-            <Route path="/bulk-messages" element={<DashboardLayout><BulkMessages /></DashboardLayout>} />
-            <Route path="/contacts" element={<DashboardLayout><Contacts /></DashboardLayout>} />
-            <Route path="/groups" element={<DashboardLayout><Groups /></DashboardLayout>} />
-            <Route path="/webhooks" element={<DashboardLayout><Webhooks /></DashboardLayout>} />
-            <Route path="/logs" element={<DashboardLayout><Logs /></DashboardLayout>} />
-            <Route path="/settings" element={<DashboardLayout><Settings /></DashboardLayout>} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <DashboardLayout>
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/sessions" element={<Sessions />} />
+              <Route path="/messages" element={<Messages />} />
+              <Route path="/bulk-messages" element={<BulkMessages />} />
+              <Route path="/contacts" element={<Contacts />} />
+              <Route path="/groups" element={<Groups />} />
+              <Route path="/webhooks" element={<Webhooks />} />
+              <Route path="/logs" element={<Logs />} />
+              <Route path="/settings" element={<Settings />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </DashboardLayout>
         </BrowserRouter>
       </TooltipProvider>
     </WhatsAppProvider>
